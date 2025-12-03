@@ -1,7 +1,7 @@
-# Project 00003
+# Project 00004
 
 ## 📖 Overview
-Project 00003 is part of my SQL portfolio series.  
+Project 00004 is part of my SQL portfolio series.  
 It demonstrates structured database design, relational queries, and workflow organization using **SQLite**.  
 The goal is to make this project **easy to clone, run, and understand** for anyone reviewing my work.
 
