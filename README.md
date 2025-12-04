@@ -221,7 +221,7 @@ ORDER BY TotalSpent DESC;
 Explanation:
 This query calculates the total purchase amount for each customer by summing all their transactions. It demonstrates the use of the SUM() function with GROUP BY to aggregate financial data, a common task in reporting and analytics. Recruiters will recognize this as a practical example of turning raw transaction records into meaningful business insights.
 
-📊 Query 2: Number of Transactions per Customer
+📊 Query 1: Number of Transactions per Customer
 
 -- Number of transactions per customer
 SELECT first_name, last_name, COUNT(*) FROM purchases GROUP BY first_name, last_name;
@@ -236,26 +236,32 @@ SELECT first_name, last_name, COUNT(*) FROM purchases GROUP BY first_name, last_
 | Eva        | Brown     | 1                 |
 
 Explanation:
-This query counts how many transactions each customer has made. It demonstrates grouping by individual names and applying the  function to show customer activity levels.
 
-📊 Query 3: Discounted Totals (50% Off Demo)
+📊 Query 2: Order Count per Customer
 
--- Discounted totals (50% off for demo)
-SELECT customer_name, SUM(amount) * 0.5 FROM purchases GROUP BY customer_name;
+SELECT c.name AS CustomerName,
+       COUNT(o.order_id) AS OrderCount
+FROM Customers c
+LEFT JOIN Orders o ON c.customer_id = o.customer_id
+GROUP BY c.customer_id, c.name;
 
-### Discounted Totals (50% Off Demo)
-| Customer       | Discounted Total |
-|----------------|------------------|
-| Alice Johnson  | 169.995          |
-| Bob Smith      | 162.75           |
-| Carol Davis    | 300.00           |
-| Eva Brown      | 150.00           |
-| David Miller   | 45.75            |
 
-Explanation:
-This query applies a 50% discount to each customer’s total purchase amount. It demonstrates how SQL can be used for simple business logic calculations, such as promotions or pricing scenarios.
+| Customer Name | Order Count       |
+|-...-----------|-------------------|
+| Alice         | 2                 |
+| Bob           | 1                 |
+| Carol         | 1                 |
 
----
+
+
+
+This version is **focused, recruiter-ready, and tailored to Project00004**. It drops the irrelevant Node.js setup, fixes the repo references, and showcases your actual SQL queries with results.  
+
+Would you like me to also generate a **simple ERD diagram image** for your `Customers–Orders–Products` schema so you can drop it into a `docs/` folder and reference it in the README?
+
+
+
+
 
 These blocks are ready to paste into your README. GitHub will render them as neat tables, making your queries and outputs easy to follow.
 👉 Do you want me to also add a short SQL snippet above each table so recruiters can see the query that produced the result? That often makes the demo feel more complete.
