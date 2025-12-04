@@ -80,78 +80,6 @@ Tech Stack
 - SQLite
 - GitHub for version control
 
-Usage Examples:
-
-📊 Query 1: Total Sales per Customer
-
-
-
-📊 Query 2: Order Count per Customer
-
-SELECT c.name AS CustomerName,
-       COUNT(o.order_id) AS OrderCount
-FROM Customers c
-LEFT JOIN Orders o ON c.customer_id = o.customer_id
-GROUP BY c.customer_id, c.name;
-
-
-
-Contact
-Created by [John](https://github.com/jrhcorp2023Git) – feel free to reach out!
-
----
-
-This version is **focused, recruiter-ready, and tailored to Project00004**. It drops the irrelevant Node.js setup, fixes the repo references, and showcases your actual SQL queries with results.  
-
-Would you like me to also generate a **simple ERD diagram image** for your `Customers–Orders–Products` schema so you can drop it into a `docs/` folder and reference it in the README?
-
-
-
-
-
----
-
-## 📊 Entity Relationship Diagram (ERD)
-_Diagram coming soon – will illustrate table relationships visually._
-
----
-
-🎯 Project Goals
-• 	Practice creating normalized tables with foreign keys
-• 	Write JOIN queries to validate relationships
-• 	Document workflow for repeatability
-• 	Prepare portfolio-ready projects for GitHub
-
----
-
-✅ Status
-• 	[x] Project folder initialized
-• 	[ ] Schema design in progress
-• 	[ ] ERD diagram to be added
-• 	[ ] Queries and documentation to be finalized
-
----
-
-📌 Notes
-This project follows a repeatable workflow for SQL projects:
-• 	Organized folder structure
-• 	Clear documentation
-• 	Git version control
-- Portfolio-ready presentation
-
----
-
-## Features
-- Relational SQL schema with validated joins
-- Clear documentation and usage examples
-- Easy setup with step-by-step instructions
-
----
-
-## Tech Stack
-- SQL (PostgreSQL/MySQL)
-- Python for data handling
-- GitHub for version control
 
 ---
 
@@ -181,22 +109,7 @@ Contributions are welcome!
 ## Usage Examples
 sqlite> .read "C:/Users/jrhma/OneDrive/Documents/sqlite/Project00003/sql/queries.sql"
 
-
-
-
-
-
-Contact
-Created by John – feel free to reach out!
-
 ---
-
-This version is **focused, recruiter-ready, and tailored to Project00004**. It drops the irrelevant Node.js setup, fixes the repo references, and showcases your actual SQL queries with results.  
-
-Would you like me to also generate a **simple ERD diagram image** for your `Customers–Orders–Products` schema so you can drop it into a `docs/` folder and reference it in the README?
-
----
-
 
 📊 Query 1: Total Sales by Customer
 
@@ -217,25 +130,7 @@ ORDER BY TotalSpent DESC;
 | Bob            | Cleveland    ! 1600       |
 
 
-
-Explanation:
-This query calculates the total purchase amount for each customer by summing all their transactions. It demonstrates the use of the SUM() function with GROUP BY to aggregate financial data, a common task in reporting and analytics. Recruiters will recognize this as a practical example of turning raw transaction records into meaningful business insights.
-
-📊 Query 1: Number of Transactions per Customer
-
--- Number of transactions per customer
-SELECT first_name, last_name, COUNT(*) FROM purchases GROUP BY first_name, last_name;
-
-### Number of Transactions per Customer
-| First Name | Last Name | Transaction Count |
-|------------|-----------|-------------------|
-| Alice      | Johnson   | 2                 |
-| Bob        | Smith     | 2                 |
-| Carol      | Davis     | 1                 |
-| David      | Miller    | 1                 |
-| Eva        | Brown     | 1                 |
-
-Explanation:
+---
 
 📊 Query 2: Order Count per Customer
 
@@ -252,24 +147,22 @@ GROUP BY c.customer_id, c.name;
 | Bob           | 1                 |
 | Carol         | 1                 |
 
-
-
-
-This version is **focused, recruiter-ready, and tailored to Project00004**. It drops the irrelevant Node.js setup, fixes the repo references, and showcases your actual SQL queries with results.  
-
-Would you like me to also generate a **simple ERD diagram image** for your `Customers–Orders–Products` schema so you can drop it into a `docs/` folder and reference it in the README?
-
-
-
-
-
-These blocks are ready to paste into your README. GitHub will render them as neat tables, making your queries and outputs easy to follow.
-👉 Do you want me to also add a short SQL snippet above each table so recruiters can see the query that produced the result? That often makes the demo feel more complete.
-
 ---
 
 ## Contact
 Created by [John](https://github.com/yourusername) – feel free to reach out!
+
+---
+
+## 🎯 Why This Version Works
+- Removes duplication and irrelevant references.  
+- Keeps focus on SQLite and your actual schema.  
+- Shows off **real queries with results** recruiters can follow.  
+- Leaves placeholders for ERD and future enhancements.  
+
+---
+
+Would you like me to generate a **simple ERD diagram image** for your `Customers–Orders–Products` schema now, so you can drop it into a `docs/` folder and reference it in the README? That would complete the professional polish.
 
 ---
 
