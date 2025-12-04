@@ -1,94 +1,113 @@
 # Project 00004
 
+# Project00004 – Sales Reporting System
+
 ## 📖 Overview
-Project 00004 is part of my SQL portfolio series.  
+Project00004 is part of my SQL portfolio series.  
 It demonstrates structured database design, relational queries, and workflow organization using **SQLite**.  
 The goal is to make this project **easy to clone, run, and understand** for anyone reviewing my work.
 
 ---
 
 ## 🚀 Project Badges
-![Last Commit](https://img.shields.io/github/last-commit/jrhcorp2023Git/Project00003)
-![Repo Size](https://img.shields.io/github/repo-size/jrhcorp2023Git/Project00003)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
+![Last Commit](https://img.shields.io/github/last-commit/jrhcorp2023Git/Project00004)
+![Repo Size](https://img.shields.io/github/repo-size/jrhcorp2023Git/Project00004)
 ![Status](https://img.shields.io/badge/status-active-brightgreen)
-![GitHub Stars](https://img.shields.io/github/stars/jrhcorp2023Git/Project00003?style=social)
-![GitHub Forks](https://img.shields.io/github/forks/jrhcorp2023Git/Project00003?style=social)
-![Top Language](https://img.shields.io/github/languages/top/jrhcorp2023Git/Project00003)
-![GitHub Commit Activity](https://img.shields.io/github/commit-activity/m/jrhcorp2023Git/Project00003)
+![GitHub Stars](https://img.shields.io/github/stars/jrhcorp2023Git/Project00004?style=social)
+![GitHub Forks](https://img.shields.io/github/forks/jrhcorp2023Git/Project00004?style=social)
+![Top Language](https://img.shields.io/github/languages/top/jrhcorp2023Git/Project00004)
+![GitHub Commit Activity](https://img.shields.io/github/commit-activity/m/jrhcorp2023Git/Project00004)
 
 ---
-
 ## 🚀 Getting Started
 
 Follow these steps to set up and run the project locally:
 
+---
+
 ### Prerequisites
-- Install [Git](https://git-scm.com/)
-- Install [Node.js](https://nodejs.org/) (or Python/Java/etc. depending on your project)
-- Ensure you have a code editor like [VS Code](https://code.visualstudio.com/)
 
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-
-2. Navigate into the project directory:
-  cd your-repo-name
-   
-3. Install dependencies:
-  npm install
-
-Running the Project
-- Start the development server:
-  npm start
-
-- Open your browser and go to:
-  http://localhost:3000
-
-Usage
-- Modify code in the src/ folder to experiment.
-- Run tests with:
-  npm test
-- Build for production:
-  npm run build
-
-# Navigate into the project folder
-cd Project00003
-
-# Open the SQL schema
-cd sql
-
----
-
-Project00003/
-├── sql/        # SQL scripts (schema, inserts, queries)
-├── docs/       # Documentation, ERD diagrams, notes
-├── data/       # Sample datasets (CSV or other formats)
-├── images/     # Screenshots or diagrams
-└── README.md   # Project overview
-
----
+----
 
 ## ⚙️ Setup Instructions
 1. Clone the repository:
+   ```bash
+   git clone https://github.com/jrhcorp2023Git/Project00004.git
+   cd Project00004
+2. Open SQLite or your preferred SQL client.
+3. Run the schema file:
 
-git clone https://github.com/jrhcorp2023Git/Project00003.git
-cd Project00003
+sqlite3 project00004.db < sql/schema.sql
 
-2. 	Open SQLite or your preferred SQL client.
+4. Load sample data:
 
-3. 	Run the schema file:
+sqlite3 project00004.db < sql/inserts.sql
 
-sqlite3 project00003.db < sql/schema.sql
+5. Execute queries:
 
-4. 	Load sample data:
+sqlite3 project00004.db < sql/queries.sql
 
-sqlite3 project00003.db < sql/data_inserts.sql
+---
 
-5. 	Execute queries from:
+📊 Entity Relationship Diagram (ERD)
+Diagram coming soon – will illustrate table relationships visually.
 
-sqlite3 project00003.db < sql/queries.sql
+🎯 Project Goals
+- Practice creating normalized tables with foreign keys
+- Write JOIN queries to validate relationships
+- Document workflow for repeatability
+- Prepare portfolio-ready projects for GitHub
+
+✅ Status
+- [x] Project folder initialized
+- [x] Schema and inserts completed
+- [ ] ERD diagram to be added
+- [ ] Queries and documentation to be finalized
+
+📌 Notes
+This project follows a repeatable workflow for SQL projects:
+- Organized folder structure
+- Clear documentation
+- Git version control
+- Portfolio-ready presentation
+
+Features
+- Relational SQL schema with validated joins
+- Clear documentation and usage examples
+- Easy setup with step-by-step instructions
+
+Tech Stack
+- SQLite
+- GitHub for version control
+
+Usage Examples:
+
+📊 Query 1: Total Sales per Customer
+
+
+
+📊 Query 2: Order Count per Customer
+
+SELECT c.name AS CustomerName,
+       COUNT(o.order_id) AS OrderCount
+FROM Customers c
+LEFT JOIN Orders o ON c.customer_id = o.customer_id
+GROUP BY c.customer_id, c.name;
+
+
+
+Contact
+Created by [John](https://github.com/jrhcorp2023Git) – feel free to reach out!
+
+---
+
+This version is **focused, recruiter-ready, and tailored to Project00004**. It drops the irrelevant Node.js setup, fixes the repo references, and showcases your actual SQL queries with results.  
+
+Would you like me to also generate a **simple ERD diagram image** for your `Customers–Orders–Products` schema so you can drop it into a `docs/` folder and reference it in the README?
+
+
+
+
 
 ---
 
@@ -162,19 +181,42 @@ Contributions are welcome!
 ## Usage Examples
 sqlite> .read "C:/Users/jrhma/OneDrive/Documents/sqlite/Project00003/sql/queries.sql"
 
-📊 Query 1: Total Purchase Amount per Customer
 
--- Total purchase amount per customer
-SELECT customer_name, SUM(amount) FROM purchases GROUP BY customer_name;
+
+
+
+
+Contact
+Created by John – feel free to reach out!
+
+---
+
+This version is **focused, recruiter-ready, and tailored to Project00004**. It drops the irrelevant Node.js setup, fixes the repo references, and showcases your actual SQL queries with results.  
+
+Would you like me to also generate a **simple ERD diagram image** for your `Customers–Orders–Products` schema so you can drop it into a `docs/` folder and reference it in the README?
+
+---
+
+
+📊 Query 1: Total Sales by Customer
+
+SELECT c.name AS CustomerName,
+       c.city AS City,
+       SUM(o.quantity * p.price) AS TotalSpent
+FROM Customers c
+JOIN Orders o ON c.customer_id = o.customer_id
+JOIN Products p ON o.product_id = p.product_id
+GROUP BY c.customer_id, c.name, c.city
+ORDER BY TotalSpent DESC;
 
 ### Total Purchase Amount per Customer
-| Customer       | Total Amount |
-|----------------|--------------|
-| Alice Johnson  | 339.99       |
-| Bob Smith      | 325.50       |
-| Carol Davis    | 300.00       |
-| Eva Brown      | 150.00       |
-| David Miller   | 45.75        |
+| Customer Name  | City         ! Spend      |
+|----------------|--------------|............!
+| Alice          | Pittsburgh   ! 2000       |
+| Carol          | Columbus     ! 1800       |
+| Bob            | Cleveland    ! 1600       |
+
+
 
 Explanation:
 This query calculates the total purchase amount for each customer by summing all their transactions. It demonstrates the use of the SUM() function with GROUP BY to aggregate financial data, a common task in reporting and analytics. Recruiters will recognize this as a practical example of turning raw transaction records into meaningful business insights.
