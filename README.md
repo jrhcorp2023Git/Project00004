@@ -26,6 +26,9 @@ Follow these steps to set up and run the project locally:
 ---
 
 ### Prerequisites
+- SQLite 3.0+ installed on your system
+- Git for cloning the repository
+- Command line access (Windows PowerShell, macOS Terminal, or Linux shell)
 
 ----
 
@@ -107,7 +110,7 @@ Contributions are welcome!
 ---
 
 ## Usage Examples
-sqlite> .read "C:/Users/jrhma/OneDrive/Documents/sqlite/Project00003/sql/queries.sql"
+sqlite> .read "C:/Users/jrhma/OneDrive/Documents/sqlite/Project00004/sql/queries.sql"
 
 ---
 
@@ -124,7 +127,7 @@ ORDER BY TotalSpent DESC;
 
 ### Total Purchase Amount per Customer
 | Customer Name  | City         ! Spend      |
-|----------------|--------------|............!
+|----------------|--------------|------------!
 | Alice          | Pittsburgh   ! 2000       |
 | Carol          | Columbus     ! 1800       |
 | Bob            | Cleveland    ! 1600       |
@@ -142,7 +145,7 @@ GROUP BY c.customer_id, c.name;
 
 
 | Customer Name | Order Count       |
-|-...-----------|-------------------|
+|---------------|-------------------|
 | Alice         | 2                 |
 | Bob           | 1                 |
 | Carol         | 1                 |
