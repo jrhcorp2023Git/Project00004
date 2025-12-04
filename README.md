@@ -51,9 +51,28 @@ sqlite3 project00004.db < sql/inserts.sql
 sqlite3 project00004.db < sql/queries.sql
 
 ---
+## ⚡ Quick Start
+1. Clone the repo:
+
+   ```bash
+   git clone https://github.com/jrhcorp2023Git/Project00004.git
+   cd Project00004
+
+2. Run schema and inserts:
+
+sqlite3 project00004.db < sql/schema.sql
+sqlite3 project00004.db < sql/inserts.sql
+
+3. Execute queries
+
+sqlite3 project00004.db < sql/queries.sql
+
+---
 
 📊 Entity Relationship Diagram (ERD)
-Diagram coming soon – will illustrate table relationships visually.
+![ERD Diagram](docs/erd.png)
+
+---
 
 🎯 Project Goals
 - Practice creating normalized tables with foreign keys
@@ -97,15 +116,15 @@ Contributions are welcome!
 ---
 
 ## Roadmap
-- [ ] Add more complex SQL queries  
-- [ ] Expand documentation with diagrams  
-- [ ] Create automated tests  
+- [ ] Add queries for monthly sales trends
+- [ ] Expand documentation with ERD and workflow diagrams
+- [ ] Create automated tests for query validation
 
 ---
 
 ## Acknowledgments
-- Inspiration from [SQL tutorials]  
-- Thanks to open-source contributors  
+- Inspiration from [SQLite Tutorial](https://www.sqlitetutorial.net/)
+- Thanks to open-source contributors
 
 ---
 
@@ -153,7 +172,7 @@ GROUP BY c.customer_id, c.name;
 ---
 
 ## Contact
-Created by [John](https://github.com/yourusername) – feel free to reach out!
+Created by [John](https://github.com/jrhcorp2023Git) – feel free to reach out!
 
 ---
 
@@ -162,6 +181,11 @@ Created by [John](https://github.com/yourusername) – feel free to reach out!
 - Keeps focus on SQLite and your actual schema.  
 - Shows off **real queries with results** recruiters can follow.  
 - Leaves placeholders for ERD and future enhancements.  
+
+---
+
+## License
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
 
 ---
 
